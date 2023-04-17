@@ -1,0 +1,14 @@
+txt_file = open("C:/Users/sybae/PycharmProjects/pythonProject/남해대교1.txt", 'r')
+first = open('first.txt', 'w')
+second = open('second.txt', 'w')
+
+for txt in txt_file:
+    x, y, z = txt.split(',')
+    if int(x) < 400000:
+        first.write(txt)
+    else:
+        second.write(txt)
+
+txt_file.close()
+first.close()
+second.close()
