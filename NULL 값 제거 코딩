@@ -1,0 +1,22 @@
+txt_file = open("C:/Users/sybae/PycharmProjects/pythonProject/남해대교2.txt", 'r')
+XNon = open('XNon.txt', 'w')
+YNon = open('YNon.txt', 'w')
+ZNon = open('ZNon.txt', 'w')
+Normal = open('Normal.txt', 'w')
+
+for txt in txt_file:
+    x, y, z = txt.split('\t')
+    if x == ' ':
+        XNon.write(txt)
+    elif y == ' ':
+        YNon.write(txt)
+    elif z == ' \n':
+        ZNon.write(txt)
+    else:
+        Normal.write(txt)
+
+txt_file.close()
+XNon.close()
+YNon.close()
+ZNon.close()
+Normal.close()
